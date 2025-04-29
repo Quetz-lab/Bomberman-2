@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 40826630}
   m_Layer: 0
   m_Name: OuterWall
-  m_TagString: Untagged
+  m_TagString: Unbreakable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 56680490}
   - component: {fileID: 56680489}
   - component: {fileID: 56680488}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -400,6 +400,33 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a334384c7c98cd48b06d2b0e7f5dbb6, type: 3}
+--- !u!1 &146342328 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6987175200171664859, guid: 7bd6cfdf93f6a52428cf8adcdc24ecb5, type: 3}
+  m_PrefabInstance: {fileID: 1090405402}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &146342334
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146342328}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8d9dce4509dfb6c439ff34cba390a3ea, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &181893351
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2413,6 +2440,70 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8091449130437326644, guid: 0a334384c7c98cd48b06d2b0e7f5dbb6, type: 3}
   m_PrefabInstance: {fileID: 1550419947}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1090405402
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3818851294747405778, guid: 7bd6cfdf93f6a52428cf8adcdc24ecb5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.089999974
+      objectReference: {fileID: 0}
+    - target: {fileID: 3818851294747405778, guid: 7bd6cfdf93f6a52428cf8adcdc24ecb5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 3818851294747405778, guid: 7bd6cfdf93f6a52428cf8adcdc24ecb5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3818851294747405778, guid: 7bd6cfdf93f6a52428cf8adcdc24ecb5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3818851294747405778, guid: 7bd6cfdf93f6a52428cf8adcdc24ecb5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3818851294747405778, guid: 7bd6cfdf93f6a52428cf8adcdc24ecb5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3818851294747405778, guid: 7bd6cfdf93f6a52428cf8adcdc24ecb5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3818851294747405778, guid: 7bd6cfdf93f6a52428cf8adcdc24ecb5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3818851294747405778, guid: 7bd6cfdf93f6a52428cf8adcdc24ecb5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3818851294747405778, guid: 7bd6cfdf93f6a52428cf8adcdc24ecb5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987175200171664859, guid: 7bd6cfdf93f6a52428cf8adcdc24ecb5, type: 3}
+      propertyPath: m_Name
+      value: Bomba Yucateca
+      objectReference: {fileID: 0}
+    - target: {fileID: 8999437158220053740, guid: 7bd6cfdf93f6a52428cf8adcdc24ecb5, type: 3}
+      propertyPath: explosionTimer
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6987175200171664859, guid: 7bd6cfdf93f6a52428cf8adcdc24ecb5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 146342334}
+  m_SourcePrefab: {fileID: 100100000, guid: 7bd6cfdf93f6a52428cf8adcdc24ecb5, type: 3}
 --- !u!4 &1090774941 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8091449130437326644, guid: 0a334384c7c98cd48b06d2b0e7f5dbb6, type: 3}
@@ -2431,7 +2522,7 @@ GameObject:
   - component: {fileID: 1096794969}
   - component: {fileID: 1096794968}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: Mi vecina chismosa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4136,7 +4227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnbreakableWallPref: {fileID: 973527704512611153, guid: 0a334384c7c98cd48b06d2b0e7f5dbb6, type: 3}
-  TheOtherWallPref: {fileID: 973527704512611153, guid: dd9fb4b84c265534789c3adbe5b78541, type: 3}
+  BreakableWallPref: {fileID: 973527704512611153, guid: dd9fb4b84c265534789c3adbe5b78541, type: 3}
 --- !u!1001 &2022827563
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4420,7 +4511,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: b2c4a804ec161944c9b82eb34f88b917, type: 2}
     - target: {fileID: 7848877838282176132, guid: bfb1a72527ee5e54c990289f1dd842c0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.09
+      value: 2.9099998
       objectReference: {fileID: 0}
     - target: {fileID: 7848877838282176132, guid: bfb1a72527ee5e54c990289f1dd842c0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4553,3 +4644,4 @@ SceneRoots:
   - {fileID: 2064988019466346767}
   - {fileID: 1696946970}
   - {fileID: 2008598421}
+  - {fileID: 1090405402}
