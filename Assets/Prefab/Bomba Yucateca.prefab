@@ -298,12 +298,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4155bfa4c404c148ac61ebb32eaea02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gridOffset: 1
+  spawnHeigth: 0
   sphereCastRad: 0.4
   layerMask:
     serializedVersion: 2
     m_Bits: 55
-  range: 625
-  explosionTimer: 2
+  range: 2
+  explosionTimer: 3
 --- !u!95 &6746996015998560501
 Animator:
   serializedVersion: 7

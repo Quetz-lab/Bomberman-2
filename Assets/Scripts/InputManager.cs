@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class InputManager : MonoBehaviour
 {
@@ -6,6 +7,7 @@ public class InputManager : MonoBehaviour
     //CharacterController characterController;
     InputSystem_Actions actions;
     public Vector2 moveDir;
+    [HideInInspector]public UnityEvent OnBombPressed;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -14,7 +16,7 @@ public class InputManager : MonoBehaviour
         actions.Enable();
         actions.Player.Move.performed += i => moveDir = i.ReadValue<Vector2>();
         actions.Player.Move.canceled += i => moveDir = Vector2.zero;
-
+        actions.Player.Attack.performed += i => OnBombPressed?.Invoke();
        
         
     }

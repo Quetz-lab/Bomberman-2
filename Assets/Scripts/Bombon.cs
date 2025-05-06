@@ -1,7 +1,13 @@
+using System;
 using UnityEngine;
-
+[RequireComponent(typeof(Animator))]
 public class Bombon : MonoBehaviour
 {
+
+    [SerializeField] int gridOffset;
+    [SerializeField] int spawnHeigth;
+
+    
     [Header("Megumin Ray")]
     [SerializeField] float sphereCastRad;
     [SerializeField] LayerMask layerMask;
@@ -10,10 +16,25 @@ public class Bombon : MonoBehaviour
     [SerializeField] int range;
     [SerializeField] float explosionTimer;
     float spawnTimer;
+    Animator animator;
 
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
     void OnEnable()
     {
         spawnTimer = Time.time;
+       Vector2 spawnPos = new Vector2(transform.position.x, transform.position.z);
+        int divMain = (int)Mathf.Floor(Mathf.Abs(spawnPos.x / gridOffset));
+        float module = spawnPos.x % gridOffset;
+
+        if (Mathf.Abs(module) > gridOffset / 2) divMain++;
+        spawnPos.y = divMain * -gridOffset;
+
+        transform.position = new Vector3(spawnPos.x, spawnHeigth, spawnPos.y);
+
     }
 
     // Update is called once per frame
@@ -21,8 +42,9 @@ public class Bombon : MonoBehaviour
     {
         if (Time.time - spawnTimer >= explosionTimer) 
         {
-            Explode();
-            gameObject.SetActive(false);
+            animator.SetTrigger("9_11");
+            spawnTimer = Time.time;
+
         }
     }
 
@@ -30,13 +52,22 @@ public class Bombon : MonoBehaviour
     {
         Gizmos.DrawSphere(transform.position, sphereCastRad);
     }
-    void Explode()
+    public void Explode()
     {
-        Ray ray = new Ray(transform.position, Vector3.right);
+        ExplodeInDirection(Vector3.right);
+        ExplodeInDirection(Vector3.left);
+        ExplodeInDirection(Vector3.forward);
+        ExplodeInDirection(Vector3.back);
+    }
+
+    void ExplodeInDirection(Vector3 direction)
+    {
+        Ray ray = new Ray(transform.position, direction);
         RaycastHit[] hits = Physics.SphereCastAll(ray, sphereCastRad, range, layerMask);
-       // Gizmos.DrawSphere(transform.position, sphereCastRad);
-        
-        if (hits.Length > 0 )
+        Array.Sort(hits, (a, b) => a.distance.CompareTo(b.distance));
+        // Gizmos.DrawSphere(transform.position, sphereCastRad);
+
+        if (hits.Length > 0)
         {
             foreach (RaycastHit hit in hits)
             {
@@ -46,6 +77,11 @@ public class Bombon : MonoBehaviour
                 if (hit.transform.tag == "Milenials y Gen Z") break;
             }
         }
+    }
+
+    public void DisableObject()
+    {
+        gameObject.SetActive(false);
     }
 
 }
