@@ -2508,6 +2508,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bomba Yucateca
       objectReference: {fileID: 0}
+    - target: {fileID: 6987175200171664859, guid: 7bd6cfdf93f6a52428cf8adcdc24ecb5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4523,7 +4527,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: b2c4a804ec161944c9b82eb34f88b917, type: 2}
     - target: {fileID: 7848877838282176132, guid: bfb1a72527ee5e54c990289f1dd842c0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.9099998
+      value: -0.09000015
       objectReference: {fileID: 0}
     - target: {fileID: 7848877838282176132, guid: bfb1a72527ee5e54c990289f1dd842c0, type: 3}
       propertyPath: m_LocalPosition.y
