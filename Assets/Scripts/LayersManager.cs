@@ -7,6 +7,7 @@ public class LayersManager : MonoBehaviour
     //PlayerManagerxd
     PlayerInputManager playerInputManager;
     [SerializeField] List<Transform> spawnPos;
+    [SerializeField] List<Material> playerMat;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -18,6 +19,7 @@ public class LayersManager : MonoBehaviour
     {
         Debug.Log("Player has Joined");
         player.gameObject.transform.position = spawnPos[playerInputManager.playerCount - 1].position;
+        player.gameObject.GetComponent<MeshRenderer>().material = playerMat[playerInputManager.playerCount - 1];
     }
     public void OnPlayerLeft(PlayerInput player)
     {

@@ -3963,6 +3963,11 @@ MonoBehaviour:
   - {fileID: 1377790944}
   - {fileID: 292916440}
   - {fileID: 1147128794}
+  playerMat:
+  - {fileID: 2100000, guid: b2c4a804ec161944c9b82eb34f88b917, type: 2}
+  - {fileID: 2100000, guid: 1933e389df05b1d41a662d305d481c00, type: 2}
+  - {fileID: 2100000, guid: 681306cf957c2bd45a550c5e0051a0d0, type: 2}
+  - {fileID: 2100000, guid: fabbcb725f2fbb24cb90f82faf8410b2, type: 2}
 --- !u!4 &1758163710 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8091449130437326644, guid: 0a334384c7c98cd48b06d2b0e7f5dbb6, type: 3}
