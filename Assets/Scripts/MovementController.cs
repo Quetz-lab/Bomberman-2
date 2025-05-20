@@ -7,6 +7,7 @@ public class MovementController : MonoBehaviour
 
     [SerializeField] float speed;
     
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,4 +25,13 @@ public class MovementController : MonoBehaviour
             characterController.Move(transform.forward * speed * Time.deltaTime);
         }
     }
+
+    public void DisablePlayer()
+    {
+        GetComponent<GMBomb>().enabled = false;
+        characterController.enabled = false;
+        GetComponent<MeshRenderer>().enabled = false;
+        this.enabled = false;
+    }
+
 }

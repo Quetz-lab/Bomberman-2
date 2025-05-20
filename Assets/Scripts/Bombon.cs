@@ -73,7 +73,11 @@ public class Bombon : MonoBehaviour
             {
                 Debug.Log(hit.transform.name);
                 if (hit.transform.tag == "Unbreakable") break;
-                hit.transform.gameObject.SetActive(false);
+                if (hit.transform.tag == "Player")
+                {
+                    hit.transform.GetComponent<MovementController>().DisablePlayer();
+                }
+                else hit.transform.gameObject.SetActive(false);
                 if (hit.transform.tag == "Milenials y Gen Z") break;
             }
         }

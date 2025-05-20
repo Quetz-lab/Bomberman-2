@@ -3,18 +3,13 @@ using System.Collections.Generic;
 
 public class GMBomb : MonoBehaviour
 {
-    InputManager manager;
+    public InputManager manager;
     public GameObject bombPrefab;
     [SerializeField] Transform bombPoolParent;
     [Header("Bomb Stats")]
     [SerializeField] int maxBombs;
     [SerializeField] int bombRange;
     List<GameObject> bombsPool = new List<GameObject>();
-
-    private void Awake()
-    {
-        manager = GetComponent<InputManager>();
-    }
 
     private void Start()
     {
@@ -26,6 +21,7 @@ public class GMBomb : MonoBehaviour
 
     void OnEnable()
     {
+        if (manager == null) manager = GetComponent<InputManager>();
         manager.OnBombPressed.AddListener(DeployBomb);
     }
 
